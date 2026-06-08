@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LMH - Turning ideas into digital reality</title>
+  <link rel="stylesheet" href="style/styles.css" type="text/css"/>
+  <link rel="icon" type="image/x-icon" href="images/softwared icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ========== CURSOR ========== -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">LMH</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"    class="nav-link">Home</a></li>
+        <li><a href="#about"   class="nav-link">About</a></li>
+        <li><a href="#skills"  class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile overlay menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#home"    class="mob-link">Home</a></li>
+        <li><a href="#about"   class="mob-link">About</a></li>
+        <li><a href="#skills"  class="mob-link">Skills</a></li>
+        <li><a href="#projects" class="mob-link">Projects</a></li>
+        <li><a href="#contact" class="mob-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <!-- Animated gradient orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <!-- Mesh grid overlay -->
+    <div class="mesh-grid"></div>
+
+    <div class="hero-content container">
+      <div class="hero-photo-wrap reveal-left">
+        <div class="hero-photo-ring">
+          <img src="images/profile-pic.png" alt="Lehlohonolo Masipa — Professional Photo" class="hero-photo" />
+          <div class="photo-glow"></div>
+        </div>
+        <!-- Floating badges -->
+        <div class="badge badge-flutter">mobile &amp; web apps</div>
+        <div class="badge badge-web">websites</div>
+        <div class="badge badge-trade">Algorithmic Trading</div>
+      </div>
+
+      <div class="hero-text reveal-right">
+        <p class="hero-eyebrow">Software Developer</p>
+        <h1 class="hero-name">Lehlohonolo<br />Masipa <span class="accent"><br>Happy</span></h1>
+        <p class="hero-tagline">"Building software solutions for real-world problems."</p>
+        <ul class="hero-services">
+          <li><i class="fa-solid fa-globe"></i>Website Development</li>
+          <li><i class="fa-solid fa-mobile-screen"></i>Mobile and Web Applications</li>
+          <li><i class="fa-solid fa-chart-line"></i>Algorithmic Trading Systems</li>
+        </ul>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact"  class="btn btn-ghost">Contact Me</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ========== WHAT I DO ========== -->
+  <section class="services" id="services">
+    <div class="container">
+      <p class="section-label reveal-up">What I Do</p>
+      <h2 class="section-title reveal-up">Turning ideas into<br /><span class="accent">digital reality</span></h2>
+
+      <div class="services-grid">
+        <article class="service-card glass reveal-up" data-delay="0">
+          <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Website Development</h3>
+          <p>Design and develop modern websites from scratch and transform outdated websites into responsive, high-performance, and competitive web experiences.</p>
+          <span class="service-tag">Websites</span>
+        </article>
+
+        <article class="service-card glass reveal-up" data-delay="100">
+          <div class="service-icon"><i class="fa-brands fa-flutter"></i></div>
+          <h3>Mobile and Web Applications</h3>
+          <p>Develop powerful mobile and web applications, including e-commerce platforms and complex, feature-rich systems tailored to real world business needs.</p>
+          <span class="service-tag"> Applications</span>
+        </article>
+
+        <article class="service-card glass reveal-up" data-delay="200">
+          <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+          <h3>Trading Algorithm Systems</h3>
+          <p>Develop custom MetaTrader 4 and 5 indicators and Expert Advisors (EAs) for algorithmic trading, designed to automate trading strategies, improve decision-making, and enhance execution efficiency.</p>
+          <span class="service-tag">Trading Automation</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-image-col reveal-left">
+        <div class="about-img-frame glass">
+          <img src="images/About.png" alt="About Lehlohonolo" class="about-img" />
+        </div>
+        <!-- Stat chips -->
+        <div class="stat-chips">
+          <div class="stat-chip glass">
+            <span class="stat-num">3+</span>
+            <span class="stat-label">Years Coding</span>
+          </div>
+          <div class="stat-chip glass">
+            <span class="stat-num">10+</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat-chip glass">
+            <span class="stat-num">3+</span>
+            <span class="stat-label">Frameworks used</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-text-col reveal-right">
+        <p class="section-label">About Me</p>
+        <h2 class="section-title">Passionate about using<br /><span class="accent">technology</span> to solve problems</h2>
+
+        <p class="about-bio">I'm a Computer Science &amp; Information Systems senior student with a deep passion for building software that makes a genuine difference. </p>
+        <p class="about-bio">I enjoy helping businesses turn ideas into software people actually use. My long-term mission is to build platforms that connect people to meaningful opportunities.</p>
+
+        <div class="about-tabs">
+          <button class="tab-btn active" data-tab="education">Education</button>
+          <button class="tab-btn" data-tab="experience">Experience</button>
+          <button class="tab-btn" data-tab="goals">Goals</button>
+        </div>
+
+        <div class="tab-content active" id="tab-education">
+          <ul class="timeline">
+            <li>
+              <span class="tl-year">2024 — Present</span>
+              <strong>Bachelor of Commerce in Computer Science &amp; Information Systems</strong>
+              <span>Undergraduate Degree</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="tab-experience">
+          <ul class="timeline">
+            <li>
+              <span class="tl-year">2023 - Present</span>
+              <strong>Freelance software Developer</strong>
+              <span>Websites, Landing Pages &amp; Trading Algorithm systems </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="tab-goals">
+          <p class="goal-text">My mission is to use software to solve real world problems and improve lives. In the Long run, I want to build scalable platforms that connect people to opportunities whether that's employment, services, or financial growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <p class="section-label reveal-up">Technology Stack</p>
+      <h2 class="section-title reveal-up">Tools &amp; <span class="accent">Technologies</span></h2>
+
+      <div class="skills-grid reveal-up">
+        <!-- Skill cards with animated progress bars -->
+        <div class="skill-item glass">
+          <div class="skill-header">
+            <span class="skill-name"><i class="fa-brands fa-html5"></i> HTML5</span>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div>
+        </div>
+
+        <div class="skill-item glass">
+          <div class="skill-header">
+            <span class="skill-name"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div>
+        </div>
+
+        <div class="skill-item glass">
+          <div class="skill-header">
+            <span class="skill-name"><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span class="skill-pct">80%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-pct="80"></div></div>
+        </div>
+
+        <div class="skill-item glass">
+          <div class="skill-header">
+            <span class="skill-name"><i class="fa-brands fa-flutter"></i> Dart (Flutter framework)</span>
+            <span class="skill-pct">70%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-pct="70"></div></div>
+        </div>
+
+        <div class="skill-item glass">
+          <div class="skill-header">
+            <span class="skill-name"><i class="fa-brands fa-python"></i> Java</span>
+            <span class="skill-pct">75%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-pct="75"></div></div>
+        </div>
+
+        <div class="skill-item glass">
+          <div class="skill-header">
+            <span class="skill-name"><i class="fa-solid fa-chart-candlestick"></i> MQL4 / MQL5</span>
+            <span class="skill-pct">70%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-pct="70"></div></div>
+        </div>
+
+        <div class="skill-item glass">
+          <div class="skill-header">
+            <span class="skill-name"><i class="fa-brands fa-git-alt"></i> Git / GitHub</span>
+            <span class="skill-pct">65%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-pct="65"></div></div>
+        </div>
+
+        <div class="skill-item glass">
+          <div class="skill-header">
+            <span class="skill-name"><i class="fa-solid fa-hashtag"></i> C# (.NET framework)</span>
+            <span class="skill-pct">70%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-pct="70"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <p class="section-label reveal-up">Featured Projects</p>
+      <h2 class="section-title reveal-up">Things I've <span class="accent">built</span></h2>
+      <p class="section-sub reveal-up">My mission: use software to solve real-world problems and improve lives.</p>
+
+      <!-- Filter buttons -->
+      <div class="project-filters reveal-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+        <button class="filter-btn" data-filter="trading">Trading</button>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card glass reveal-up" data-cat="web" data-delay="0">
+          <div class="project-img-wrap">
+            <img src="images/memorial.png" alt="GetService Platform" class="project-img" />
+            <div class="project-overlay">
+              <a href="https://communityspeechandhearing.netlify.app/" class="proj-link" aria-label="View project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="https://github.com/lehlohonolohappymasipa/community-speech-and-hearing-web/blob/main/index.html" class="proj-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Website</span>
+            <h3>A memorial website</h3>
+            <p>A website in Loving memory of my GrandFather who I just recently lost</p>
+          </div>
+        </article>
+
+        <article class="project-card glass reveal-up" data-cat="mobile" data-delay="100">
+          <div class="project-img-wrap">
+            <img src="images/sneakaSA.png" alt="Trading App" class="project-img" />
+            <div class="project-overlay">
+              <a href="https://github.com/lehlohonolohappymasipa/sneaker-sa" class="proj-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Mobile App</span>
+            <h3>SneakaSA</h3>
+            <p>A cross-platform mobile e-commerce app for selling South African shoe brands.</p>
+          </div>
+        </article>
+
+        <article class="project-card glass reveal-up" data-cat="trading" data-delay="200">
+          <div class="project-img-wrap">
+            <img src="images/trade.png" alt="MT4 Expert Advisor" class="project-img" />
+            <div class="project-overlay">
+              <a href="https://github.com/lehlohonolohappymasipa/The-Forever-Model-EA/blob/main/The%20Forever%20Model%20Trader%20EA.mq5" class="proj-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Trading Automation</span>
+            <h3>MT5 Expert Advisor</h3>
+            <p>An MQL5-powered algorithmic trading bot with custom risk management and entry/exit strategies.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact" id="contact">
+    <!-- Orb background -->
+    <div class="orb orb-4"></div>
+
+    <div class="container contact-grid">
+      <div class="contact-info reveal-left">
+        <p class="section-label">Get In Touch</p>
+        <h2 class="section-title">Let's build something<br /><span class="accent">together</span></h2>
+        <p class="contact-desc">Whether you need a website, mobile app, or trading system. I'd love to hear about your project.</p>
+
+        <ul class="contact-details">
+          <li>
+            <span class="cd-icon"><i class="fa-solid fa-envelope"></i></span>
+            <span>masipalh@icloud.com</span>
+          </li>
+          <li>
+            <span class="cd-icon"><i class="fa-solid fa-phone"></i></span>
+            <span>+27 62 715 2900</span>
+          </li>
+          <li>
+            <span class="cd-icon"><i class="fa-solid fa-location-dot"></i></span>
+            <span>Summerstrand Eastern Cape<br/> South Africa</span>
+          </li>
+        </ul>
+
+        <div class="social-links">
+          <a href="https://github.com/lehlohonolohappymasipa" class="social-btn glass" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/lehlohonolo-happy-masipa-5552841b4" class="social-btn glass" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61587234401630" class="social-btn glass" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap reveal-right">
+        <form action="mailto:masipalh@icloud.com" class="contact-form glass" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+              <span class="form-error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address <span class="req">*</span></label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+              <span class="form-error" id="emailError"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service Needed <span class="req">*</span></label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service…</option>
+              <option value="website">Website</option>
+              <option value="mobile">Mobile &amp;/ Web Application</option>
+              <option value="trading">Trading Automation</option>
+              <option value="other">Other</option>
+            </select>
+            <span class="form-error" id="serviceError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="budget">Budget Range</label>
+            <select id="budget" name="budget">
+              <option value="" disabled selected>Select budget…</option>
+              <option value="<5k">Under R2 500</option>
+              <option value="5-15k">R2 500 – R8 000</option>
+              <option value="15-30k">R8 000 – R15 000</option>
+              <option value="30k+">R15 000+</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message <span class="req">*</span></label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+
+          <!-- Checkbox row -->
+          <div class="form-check">
+            <input type="checkbox" id="newsletter" name="newsletter" />
+            <label for="newsletter">I'd like to receive occasional project updates and newsletters.</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+            <span class="btn-label">Send Message</span>
+            <i class="fa-solid fa-paper-plane btn-icon"></i>
+          </button>
+
+          <!-- Success / error feedback -->
+          <div class="form-feedback" id="formFeedback"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <img id="footerLogo" class="footer-logo" alt="LM Logo" />
+      <p class="footer-copy">&copy; 2026. All rights reserved.</p>
+      <a href="#home" class="back-top" aria-label="Back to top">
+        <i class="fa-solid fa-chevron-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- External JS last -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script/script.js"></script>
+</body>
+</html>
