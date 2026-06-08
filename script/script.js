@@ -307,7 +307,9 @@ $(function () {
       encoded.append(key, value);
     }
 
-    fetch('/', {
+    const actionUrl = $form.attr('action') || window.location.pathname || '/';
+
+    fetch(actionUrl, {
       method: 'POST',
       body: encoded,
       headers: {
@@ -327,7 +329,10 @@ $(function () {
         }
       })
       .catch(function () {
-        setFormFeedback('Oops! Something went wrong. Please try again or email me directly.', 'error');
+        const message = window.location.protocol === 'file:' || window.location.hostname === 'localhost'
+          ? 'The form submission only works on a deployed site with a backend. Local preview cannot send messages.'
+          : 'Oops! Something went wrong. Please try again or email me directly.';
+        setFormFeedback(message, 'error');
       })
       .finally(function () {
         disableSubmit(false);
