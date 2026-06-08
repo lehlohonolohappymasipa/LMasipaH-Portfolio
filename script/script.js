@@ -303,41 +303,41 @@ $(function () {
 
     const formData = new FormData(this);
     const encoded  = new URLSearchParams();
+
     for (const [key, value] of formData.entries()) {
       encoded.append(key, value);
     }
 
-    const actionUrl = $form.attr('action') || window.location.pathname || '/';
+    encoded.append("form-name", "contact");
 
-    fetch(actionUrl, {
-      method: 'POST',
-      body: encoded,
+    fetch("/", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      body: encoded.toString()
+    })
+    .then(function (response) {
+      if (response.ok) {
+        setFormFeedback('Message sent successfully! I will get back to you shortly.', 'success');
+        $form[0].reset();
+
+        clearError('name');
+        clearError('email');
+        clearError('service');
+        clearError('message');
+      } else {
+        throw new Error('Network response was not ok');
       }
     })
-      .then(function (response) {
-        if (response.ok) {
-          setFormFeedback('Message sent successfully! I will get back to you shortly.', 'success');
-          $form[0].reset();
-          clearError('name');
-          clearError('email');
-          clearError('service');
-          clearError('message');
-        } else {
-          throw new Error('Network response was not ok');
-        }
-      })
-      .catch(function () {
-        const message = window.location.protocol === 'file:' || window.location.hostname === 'localhost'
-          ? 'The form submission only works on a deployed site with a backend. Local preview cannot send messages.'
-          : 'Oops! Something went wrong. Please try again or email me directly.';
-        setFormFeedback(message, 'error');
-      })
-      .finally(function () {
-        disableSubmit(false);
-        toggleLoading(false);
-      });
+    .catch(function () {
+      const message = 'Something went wrong. Please try again or email me directly.';
+      setFormFeedback(message, 'error');
+    })
+    .finally(function () {
+      disableSubmit(false);
+      toggleLoading(false);
+    });
   });
 
   function setFormFeedback(message, type) {
