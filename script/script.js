@@ -211,6 +211,8 @@ $(function () {
   const $form        = $('#contactForm');
   const $submitBtn   = $('#submitBtn');
   const $feedback    = $('#formFeedback');
+  const $submitLabel = $submitBtn.find('.btn-label');
+  const submitLabelText = $submitLabel.text();
 
   // Real-time field validation
   $('#name').on('blur input', function () { validateName(); });
@@ -282,22 +284,78 @@ $(function () {
   }
 
   $form.on('submit', function (e) {
+    e.preventDefault();
+
     const nameOk    = validateName();
     const emailOk   = validateEmail();
     const serviceOk = validateService();
     const msgOk     = validateMessage();
 
     if (!nameOk || !emailOk || !serviceOk || !msgOk) {
-      e.preventDefault();
-      // Shake animation on the form
       $form.addClass('shake');
       setTimeout(function () { $form.removeClass('shake'); }, 500);
       return;
     }
 
-    // Validation passed - allow form to submit via mailto action
-    // Don't prevent default, let the browser open the email client
+    setFormFeedback('Sending message...', 'success');
+    disableSubmit(true);
+    toggleLoading(true);
+
+    const formData = new FormData(this);
+    const encoded  = new URLSearchParams();
+    for (const [key, value] of formData.entries()) {
+      encoded.append(key, value);
+    }
+
+    fetch('/', {
+      method: 'POST',
+      body: encoded,
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+    })
+      .then(function (response) {
+        if (response.ok) {
+          setFormFeedback('Message sent successfully! I will get back to you shortly.', 'success');
+          $form[0].reset();
+          clearError('name');
+          clearError('email');
+          clearError('service');
+          clearError('message');
+        } else {
+          throw new Error('Network response was not ok');
+        }
+      })
+      .catch(function () {
+        setFormFeedback('Oops! Something went wrong. Please try again or email me directly.', 'error');
+      })
+      .finally(function () {
+        disableSubmit(false);
+        toggleLoading(false);
+      });
   });
+
+  function setFormFeedback(message, type) {
+    $feedback.removeClass('success error').addClass(type).text(message).show();
+  }
+
+  function disableSubmit(state) {
+    $submitBtn.prop('disabled', state);
+    if (state) {
+      $submitBtn.addClass('disabled');
+    } else {
+      $submitBtn.removeClass('disabled');
+    }
+  }
+
+  function toggleLoading(state) {
+    $submitBtn.toggleClass('loading', state);
+    if (state) {
+      $submitLabel.text('Sending...');
+    } else {
+      $submitLabel.text(submitLabelText);
+    }
+  }
 
   /* ---- SMOOTH SCROLL for anchor links ---- */
   $('a[href^="#"]').on('click', function (e) {

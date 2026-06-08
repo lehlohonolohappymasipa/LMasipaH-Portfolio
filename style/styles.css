@@ -585,6 +585,41 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   transform: translateY(-2px);
 }
 
+.btn:disabled,
+.btn.disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,0.45);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.85s linear infinite;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--trans), visibility var(--trans);
+}
+
+.btn.loading .btn-label,
+.btn.loading .btn-icon {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.btn.loading .btn-spinner {
+  opacity: 1;
+  visibility: visible;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 .btn-ghost {
   background: transparent;
   color: var(--text-primary);

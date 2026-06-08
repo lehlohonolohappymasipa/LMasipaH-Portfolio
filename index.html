@@ -367,9 +367,10 @@
       </div>
 
       <div class="contact-form-wrap reveal-right">
-        <form action="mailto:masipalh@icloud.com" class="contact-form glass" id="contactForm" novalidate>
+        <form name="contact" method="POST" data-netlify="true" id="contactForm" class="contact-form glass">
           <div class="form-row">
             <div class="form-group">
+              <input type="hidden" name="form-name" value="contact" />
               <label for="name">Full Name <span class="req">*</span></label>
               <input type="text" id="name" name="name" placeholder="Your name" required />
               <span class="form-error" id="nameError"></span>
@@ -418,11 +419,12 @@
 
           <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
             <span class="btn-label">Send Message</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
             <i class="fa-solid fa-paper-plane btn-icon"></i>
           </button>
 
           <!-- Success / error feedback -->
-          <div class="form-feedback" id="formFeedback"></div>
+          <div class="form-feedback" id="formFeedback" role="status" aria-live="polite"></div>
         </form>
       </div>
     </div>
