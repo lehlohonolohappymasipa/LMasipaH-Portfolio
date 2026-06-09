@@ -332,7 +332,7 @@ $(function () {
   console.error("Netlify form error:", error);
 
   setFormFeedback(
-    "Message failed to send. Check Netlify Forms dashboard or deploy status.",
+    "Message failed to send. Try again or email me directly.",
     "error"
   );
 })
