@@ -355,7 +355,7 @@
           </li>
           <li>
             <span class="cd-icon"><i class="fa-solid fa-location-dot"></i></span>
-            <span>Summerstrand Eastern Cape<br/> South Africa</span>
+            <span>Gqeberha Eastern Cape<br/> South Africa</span>
           </li>
         </ul>
 
@@ -367,10 +367,18 @@
       </div>
 
       <div class="contact-form-wrap reveal-right">
-        <form name="contact" method="POST" data-netlify="true" id="contactForm" class="contact-form glass" data-netlify-honeypot="bot-field">
+        <form name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            id="contactForm"
+            class="contact-form glass">
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
+            <input name="bot-field" />
+          </p>
           <div class="form-row">
             <div class="form-group">
-              <input type="hidden" name="form-name" value="contact" />
               <label for="name">Full Name <span class="req">*</span></label>
               <input type="text" id="name" name="name" placeholder="Your name" required />
               <span class="form-error" id="nameError"></span>

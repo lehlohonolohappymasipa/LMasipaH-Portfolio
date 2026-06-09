@@ -304,40 +304,42 @@ $(function () {
     const formData = new FormData(this);
     const encoded  = new URLSearchParams();
 
-    for (const [key, value] of formData.entries()) {
+    formData.forEach((value, key) => {
       encoded.append(key, value);
-    }
+    });
 
     encoded.append("form-name", "contact");
 
     fetch("/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-      body: encoded.toString()
-    })
-    .then(function (response) {
-      if (response.ok) {
-        setFormFeedback('Message sent successfully! I will get back to you shortly.', 'success');
-        $form[0].reset();
+  method: "POST",
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded"
+  },
+  body: encoded.toString()
+})
+.then((response) => {
+  if (!response.ok) throw new Error("Network error");
 
-        clearError('name');
-        clearError('email');
-        clearError('service');
-        clearError('message');
-      } else {
-        throw new Error('Network response was not ok');
-      }
-    })
-    .catch(function () {
-      const message = 'Something went wrong. Please try again or email me directly.';
-      setFormFeedback(message, 'error');
-    })
-    .finally(function () {
-      disableSubmit(false);
-      toggleLoading(false);
-    });
+  setFormFeedback(
+    "Message sent successfully! I will get back to you shortly.",
+    "success"
+  );
+
+  $form[0].reset();
+  $submitBtn.prop("disabled", false);
+})
+.catch((error) => {
+  console.error("Netlify form error:", error);
+
+  setFormFeedback(
+    "Message failed to send. Check Netlify Forms dashboard or deploy status.",
+    "error"
+  );
+})
+.finally(() => {
+  disableSubmit(false);
+  toggleLoading(false);
+});
   });
 
   function setFormFeedback(message, type) {
