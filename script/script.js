@@ -129,7 +129,7 @@ $(function () {
   const $html        = $('html');
 
   // Load saved theme
-  const savedTheme = localStorage.getItem('lm-theme') || 'dark';
+  const savedTheme = localStorage.getItem('lm-theme') || 'light';
   $html.attr('data-theme', savedTheme);
   updateThemeIcon(savedTheme);
 
