@@ -182,7 +182,7 @@ $(function () {
     footerLogo.attr('src', logoSrc);
   }
 
-  updateFooterLogo(savedTheme);
+  updateFooterLogo(initialTheme);
 
   /* ---- ABOUT: TAB SWITCHER ---- */
   $('.tab-btn').on('click', function () {
@@ -202,34 +202,26 @@ $(function () {
 
   /* ---- PROJECT FILTER ---- */
   $('.filter-btn').on('click', function () {
-    const filter = $(this).data('filter');
+    const filter = String($(this).data('filter') || 'all').toLowerCase();
 
     // Update buttons
     $('.filter-btn').removeClass('active');
     $(this).addClass('active');
 
-    // Show/hide cards
-    if (filter === 'all') {
-      $('.project-card').each(function (i) {
-        const $card = $(this);
-        const delay = i * 80;
+    $('.project-card').each(function (i) {
+      const $card = $(this);
+      const cardCategory = String($card.data('cat') || '').toLowerCase();
+      const isMatch = filter === 'all' || cardCategory === filter || (filter === 'expert-advisor' && cardCategory === 'trading');
+
+      if (isMatch) {
+        const delay = i * 60;
         setTimeout(function () {
-          $card.removeClass('hidden').hide().fadeIn(300);
+          $card.removeClass('hidden').stop(true, true).hide().fadeIn(300);
         }, delay);
-      });
-    } else {
-      $('.project-card').each(function (i) {
-        const $card = $(this);
-        if ($card.data('cat') === filter) {
-          const delay = i * 60;
-          setTimeout(function () {
-            $card.removeClass('hidden').hide().fadeIn(300);
-          }, delay);
-        } else {
-          $card.addClass('hidden').hide();
-        }
-      });
-    }
+      } else {
+        $card.addClass('hidden').stop(true, true).fadeOut(180);
+      }
+    });
   });
 
   /* ---- CONTACT FORM VALIDATION ---- */
