@@ -1,471 +1,243 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LMH - Turning ideas into digital reality</title>
-  <link rel="stylesheet" href="style/styles.css" type="text/css"/>
-  <link rel="icon" type="image/x-icon" href="images/softwared icon.png">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Softwared | MT4 &amp; MT5 Indicators, Expert Advisors and VPS Hosting</title>
+<meta name="description" content="Custom MetaTrader 4/5 indicators and Expert Advisors in MQL5, plus VPS hosting for your EA. Automate a strategy that already works.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Styles/styles.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-  <!-- ========== CURSOR ========== -->
-  <div class="cursor-dot"></div>
-  <div class="cursor-outline"></div>
+<header class="site-header">
+  <div class="wrap bar">
+    <a href="#top" class="brand"><img src="assets/logo.svg" alt="Softwared – Trading Automation" width="150" height="44"></a>
+    <button class="menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+    <nav id="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#framework">Framework</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#team">Our team</a>
+      <a href="#credentials">Credentials</a>
+      <a class="btn btn-sm" href="#contact">Get a quote</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- ========== NAVBAR ========== -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="#home" class="nav-logo">LMH</a>
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">MetaTrader 4 &amp; 5 · MQL5 development</p>
+      <h1>Automate a strategy that already works.</h1>
+      <p class="lead">We build indicators and Expert Advisors for traders who run their trading as a business, and host them on reliable VPS infrastructure.</p>
+      <div class="actions">
+        <a class="btn" href="https://wa.me/27627152900?text=Hi%2C%20I%27d%20like%20to%20automate%20my%20strategy." target="_blank" rel="noopener">Chat on WhatsApp</a>
+        <a class="btn btn-ghost" href="tel:+27627152900">Call +27 62 715 2900</a>
+      </div>
+    </div>
+    <figure class="ph ph-hero">
+      <img src="assets/trade.webp" alt="Softwared indicator running on a MetaTrader 5 chart" width="1600" height="1000" onerror="this.remove()">
+    </figure>
+  </div>
+</section>
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home"    class="nav-link">Home</a></li>
-        <li><a href="#about"   class="nav-link">About</a></li>
-        <li><a href="#skills"  class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+<section class="quote">
+  <div class="wrap">
+    <blockquote>
+      <p>“The first rule of any technology used in a business is that automation applied to an efficient operation will magnify the efficiency. The second is that automation applied to an inefficient operation will magnify the inefficiency.”</p>
+    </blockquote>
+</section>
+
+<section id="services" class="section">
+  <div class="wrap">
+    <h2>What we build</h2>
+    <div class="grid4 reveal">
+      <article class="card"><h3>Indicators</h3><p>MT4 and MT5 indicators that mark your exact conditions, so you stop second-guessing the chart.</p></article>
+      <article class="card"><h3>Expert Advisors</h3><p>Fully automated, rules-based EAs in MQL5 with built-in risk controls and prop-firm-friendly limits.</p></article>
+      <article class="card"><h3>Custom MT5 development</h3><p>Your strategy, your rules. Coded, back-tested and handed over with the source.</p></article>
+      <article class="card"><h3>VPS hosting</h3><p>Your EA running 24/7 on a low-latency server, set up and monitored for you.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="framework" class="section alt">
+  <div class="wrap">
+    <h2>What a profitable strategy needs</h2>
+    <p class="sub">Every EA we build answers four questions. If any one is vague, the automation will magnify it.</p>
+
+    <div class="diagram reveal">
+      <div class="chart-panel">
+        <div class="chart-scroll" role="region" aria-label="Illustrative candlestick chart" tabindex="0">
+          <svg class="market-chart" viewBox="0 0 760 360" role="img" aria-labelledby="t1 d1">
+        <title id="t1">The four requirements of a profitable strategy</title>
+        <desc id="d1">Illustrative candlestick chart showing a liquidity sweep, long entry, stop loss below entry and take profit above entry.</desc>
+        <rect x="55" y="24" width="550" height="282" rx="8" class="chart-surface"/>
+        <line x1="64" y1="64" x2="596" y2="64" class="chart-grid"/>
+        <line x1="64" y1="104" x2="596" y2="104" class="chart-grid"/>
+        <line x1="64" y1="144" x2="596" y2="144" class="chart-grid"/>
+        <line x1="64" y1="184" x2="596" y2="184" class="chart-grid"/>
+        <line x1="64" y1="224" x2="596" y2="224" class="chart-grid"/>
+        <line x1="64" y1="264" x2="596" y2="264" class="chart-grid"/>
+        <text x="64" y="42" class="chart-axis">PRICE</text>
+        <rect x="276" y="64" width="320" height="136" class="chart-reward"/>
+        <rect x="276" y="200" width="320" height="54" class="chart-risk"/>
+        <line x1="64" y1="64" x2="596" y2="64" class="chart-level chart-tp"/>
+        <line x1="276" y1="200" x2="596" y2="200" class="chart-level chart-entry"/>
+        <line x1="276" y1="254" x2="596" y2="254" class="chart-level chart-sl"/>
+        <g class="candle candle-down"><line x1="78" y1="106" x2="78" y2="145"/><rect x="74" y="112" width="8" height="22"/></g>
+        <g class="candle candle-down"><line x1="100" y1="126" x2="100" y2="164"/><rect x="96" y="132" width="8" height="24"/></g>
+        <g class="candle candle-up"><line x1="122" y1="139" x2="122" y2="170"/><rect x="118" y="144" width="8" height="13"/></g>
+        <g class="candle candle-down"><line x1="144" y1="142" x2="144" y2="181"/><rect x="140" y="150" width="8" height="22"/></g>
+        <g class="candle candle-down"><line x1="166" y1="163" x2="166" y2="193"/><rect x="162" y="170" width="8" height="17"/></g>
+        <g class="candle candle-down"><line x1="188" y1="178" x2="188" y2="207"/><rect x="184" y="185" width="8" height="16"/></g>
+        <g class="candle candle-down"><line x1="210" y1="192" x2="210" y2="226"/><rect x="206" y="199" width="8" height="19"/></g>
+        <g class="candle candle-up"><line x1="232" y1="201" x2="232" y2="229"/><rect x="228" y="207" width="8" height="12"/></g>
+        <g class="candle candle-down"><line x1="254" y1="205" x2="254" y2="239"/><rect x="250" y="212" width="8" height="17"/></g>
+        <g class="candle candle-up"><line x1="276" y1="207" x2="276" y2="237"/><rect x="272" y="211" width="8" height="17"/></g>
+        <g class="candle candle-up"><line x1="298" y1="188" x2="298" y2="217"/><rect x="294" y="194" width="8" height="17"/></g>
+        <g class="candle candle-up"><line x1="320" y1="170" x2="320" y2="201"/><rect x="316" y="177" width="8" height="17"/></g>
+        <g class="candle candle-down"><line x1="342" y1="168" x2="342" y2="195"/><rect x="338" y="177" width="8" height="11"/></g>
+        <g class="candle candle-up"><line x1="364" y1="151" x2="364" y2="184"/><rect x="360" y="158" width="8" height="19"/></g>
+        <g class="candle candle-up"><line x1="386" y1="136" x2="386" y2="166"/><rect x="382" y="142" width="8" height="16"/></g>
+        <g class="candle candle-up"><line x1="408" y1="119" x2="408" y2="149"/><rect x="404" y="126" width="8" height="16"/></g>
+        <g class="candle candle-down"><line x1="430" y1="121" x2="430" y2="151"/><rect x="426" y="126" width="8" height="15"/></g>
+        <g class="candle candle-up"><line x1="452" y1="99" x2="452" y2="134"/><rect x="448" y="106" width="8" height="20"/></g>
+        <g class="candle candle-up"><line x1="474" y1="87" x2="474" y2="114"/><rect x="470" y="93" width="8" height="13"/></g>
+        <g class="candle candle-down"><line x1="496" y1="88" x2="496" y2="117"/><rect x="492" y="94" width="8" height="13"/></g>
+        <g class="candle candle-up"><line x1="518" y1="68" x2="518" y2="103"/><rect x="514" y="76" width="8" height="18"/></g>
+        <g class="candle candle-down"><line x1="540" y1="70" x2="540" y2="98"/><rect x="536" y="76" width="8" height="12"/></g>
+        <g class="candle candle-up"><line x1="562" y1="49" x2="562" y2="83"/><rect x="558" y="57" width="8" height="19"/></g>
+        <g class="candle candle-down"><line x1="584" y1="50" x2="584" y2="81"/><rect x="580" y="57" width="8" height="13"/></g>
+        <circle cx="276" cy="200" r="5" class="chart-marker"/>
+        <text x="610" y="68" class="chart-label">4 · Take profit</text>
+        <text x="610" y="204" class="chart-label">2 · Entry</text>
+        <text x="610" y="258" class="chart-label">3 · Stop loss</text>
+        <text x="176" y="247" class="chart-sweep">1 · Liquidity sweep</text>
+        <text x="64" y="326" class="chart-time">Market movement · illustrative example</text>
+        <text x="64" y="348" class="chart-note">Risk is defined before entry; reward is planned against it.</text>
+          </svg>
+        </div>
+        <p class="chart-scroll-hint">Swipe horizontally to inspect the chart.</p>
+      </div>
+      <ol class="legend">
+        <li><strong>Conditions for entry.</strong> The objective, repeatable setup that must be true.</li>
+        <li><strong>Entry position.</strong> The exact price or trigger where the order is placed.</li>
+        <li><strong>Stop loss.</strong> Where the idea is proven wrong and the loss is capped.</li>
+        <li><strong>Take profit.</strong> Where the trade is closed, sized against the risk taken.</li>
+      </ol>
+    </div>
+
+    <h2 class="mt">The profitable trader triad</h2>
+    <p class="sub">Strategy alone doesn’t pay. A profitable trader needs all three, and an EA covers the one that fails most often: psychology.</p>
+    <div class="diagram reveal">
+      <svg viewBox="0 0 520 380" role="img" aria-labelledby="t2 d2">
+        <title id="t2">The profitable trader triad</title>
+        <desc id="d2">A triangle linking trading strategy, risk management and trading psychology around a centre labelled profitable trader.</desc>
+        <polygon points="260,70 100,300 420,300" class="tri"/>
+        <g class="node"><circle cx="260" cy="70" r="52"/><text x="260" y="66" class="nt">Trading</text><text x="260" y="82" class="nt">strategy</text></g>
+        <g class="node"><circle cx="100" cy="300" r="52"/><text x="100" y="296" class="nt">Risk</text><text x="100" y="312" class="nt">management</text></g>
+        <g class="node"><circle cx="420" cy="300" r="52"/><text x="420" y="296" class="nt">Trading</text><text x="420" y="312" class="nt">psychology</text></g>
+        <text x="260" y="215" class="ctr">Profitable</text><text x="260" y="235" class="ctr">trader</text>
+      </svg>
+      <ul class="legend">
+        <li><strong>Strategy:</strong> a tested edge with clear rules.</li>
+        <li><strong>Risk management:</strong> position sizing and drawdown limits that keep you in the game. Automations keeps it consistent</li>
+        <li><strong>Psychology:</strong> executing the plan every time. Automation removes hesitation, revenge trades and overrides.</li>
       </ul>
-
-      <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-          <i class="fa-solid fa-moon" id="themeIcon"></i>
-        </button>
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
     </div>
+  </div>
+</section>
 
-    <!-- Mobile overlay menu -->
-    <div class="mobile-menu" id="mobileMenu">
-      <ul>
-        <li><a href="#home"    class="mob-link">Home</a></li>
-        <li><a href="#about"   class="mob-link">About</a></li>
-        <li><a href="#skills"  class="mob-link">Skills</a></li>
-        <li><a href="#projects" class="mob-link">Projects</a></li>
-        <li><a href="#contact" class="mob-link">Contact</a></li>
-      </ul>
+<section id="pricing" class="section">
+  <div class="wrap">
+    <h2>Pricing</h2>
+    <div class="grid3 reveal">
+      <article class="card tier"><h3>Custom Indicator</h3><p class="price"><span class="price-prefix">starting from<br></span> $25.00<span> once-off</span></p><ul><li>MT4 or MT5</li><li>Your rules, alerts included</li><li>Delivered as .ex4 / .ex5</li></ul><a class="btn btn-ghost" href="#contact">Request this</a></article>
+      <article class="card tier featured"><h3>Expert Advisor</h3><p class="price"><span class="price-prefix">starting from<br></span> $55.00<span> once-off</span></p><ul><li>Custom MQL5 EA</li><li>Back-test report</li><li>Risk and prop-firm rules built in</li></ul><a class="btn" href="#contact">Request this</a></article>
+      <article class="card tier"><h3>VPS Hosting</h3><p class="price"> $15.00<span> / month</span></p><ul><li>Setup of your EA</li><li>24/5 uptime</li><li>Monitoring</li></ul><a class="btn btn-ghost" href="#contact">Request this</a></article>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- ========== HERO ========== -->
-  <section class="hero" id="home">
-    <!-- Animated gradient orbs -->
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-    <!-- Mesh grid overlay -->
-    <div class="mesh-grid"></div>
-
-    <div class="hero-content container">
-      <div class="hero-photo-wrap reveal-left">
-        <div class="hero-photo-ring">
-          <img src="images/profile-pic.png" alt="Lehlohonolo Masipa — Professional Photo" class="hero-photo" />
-          <div class="photo-glow"></div>
+<section id="team" class="section">
+  <div class="wrap">
+    <p class="eyebrow">The people behind the work</p>
+    <h2>Our team</h2>
+    <p class="sub">Trading experience and technical study, brought together to build with purpose.</p>
+    <article class="team-card reveal">
+      <div class="team-portrait">
+        <img src="assets/masipa's.webp"
+            alt="Portrait of Masipa Lehlohonolo Happy"
+            width="1200"
+            height="1200"
+            loading="lazy">
         </div>
-        <!-- Floating badges -->
-        <div class="badge badge-flutter">mobile &amp; web apps</div>
-        <div class="badge badge-web">websites</div>
-        <div class="badge badge-trade">Algorithmic Trading</div>
-      </div>
-
-      <div class="hero-text reveal-right">
-        <p class="hero-eyebrow">Software Developer</p>
-        <h1 class="hero-name">Lehlohonolo<br />Masipa <span class="accent"><br>Happy</span></h1>
-        <p class="hero-tagline">"Building software solutions for real-world problems."</p>
-        <ul class="hero-services">
-          <li><i class="fa-solid fa-globe"></i>Website Development</li>
-          <li><i class="fa-solid fa-mobile-screen"></i>Mobile and Web Applications</li>
-          <li><i class="fa-solid fa-chart-line"></i>Algorithmic Trading Systems</li>
-        </ul>
-        <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#contact"  class="btn btn-ghost">Contact Me</a>
+      <div class="team-bio">
+        <p class="eyebrow">Team member</p>
+        <h3>Masipa Lehlohonolo Happy</h3>
+        <p class="team-role">BCOM (Computer Science and Information Systems) final year student <br>Nelson Mandela University</p>
+        <p>With 7+ years of trading experience, Lehlohonolo brings a trader’s perspective to the tools and systems Softwared builds.</p>
+        <div class="team-socials" aria-label="Social profiles">
+          <a class="social-btn" href="https://www.linkedin.com/in/lehlohonolo-happy-masipa-5552841b4" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile for Masipa Lehlohonolo Happy">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.34H4.96V9.02h2.97v9.32ZM6.45 7.75a1.72 1.72 0 1 1 0-3.44 1.72 1.72 0 0 1 0 3.44Zm11.89 10.59h-2.96v-4.53c0-1.08-.02-2.47-1.51-2.47-1.51 0-1.74 1.18-1.74 2.39v4.61H9.17V9.02h2.84v1.27h.04c.39-.73 1.36-1.5 2.8-1.5 2.99 0 3.54 1.97 3.54 4.53v5.02Z"/></svg>
+          </a>
+          <a class="social-btn" href="https://github.com/lehlohonolohappymasipa" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile for Masipa Lehlohonolo Happy">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.31-3.76-1.31-.51-1.29-1.24-1.63-1.24-1.63-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.71 2.62 1.22 3.26.93.1-.72.39-1.22.71-1.5-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.21 1.16-2.99-.12-.28-.5-1.42.11-2.95 0 0 .95-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.11-1.44 3.05-1.14 3.05-1.14.61 1.53.23 2.67.11 2.95.72.78 1.16 1.77 1.16 2.99 0 4.29-2.62 5.24-5.12 5.51.4.35.76 1.03.76 2.08v3.07c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg>
+          </a>
         </div>
       </div>
+    </article>
+  </div>
+</section>
+
+<section id="credentials" class="section alt">
+  <div class="wrap">
+    <h2>Proof we trade what we build</h2>
+    <p class="sub">Two funded-trader challenges passed, using the same discipline we code into every EA.</p>
+    <div class="grid2 reveal">
+      <figure class="ph ph-cert">
+        <img src="assets/certs/5ers.webp" alt="The5%ers challenge pass certificate" width="1200" height="850" loading="lazy" onerror="this.remove()">
+        <figcaption>The 5%ers</figcaption></figure>
+      <figure class="ph ph-cert" >
+        <img src="assets/certs/gft.webp" alt="Goat Funded Trader challenge pass certificate" width="1200" height="850" loading="lazy" onerror="this.remove()">
+        <figcaption>Goat Funded Trader</figcaption></figure>
     </div>
+  </div>
+</section>
 
-    <!-- Scroll hint -->
-    <div class="scroll-hint">
-      <span>Scroll</span>
-      <div class="scroll-arrow"></div>
+<section id="contact" class="cta">
+  <div class="wrap">
+    <h2>Tell us about your strategy</h2>
+    <p>Send your rules in a message. We’ll reply with feasibility and a quote.</p>
+    <div class="actions center">
+      <a class="btn btn-dark" href="https://wa.me/27627152900?text=Hi%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">Chat on WhatsApp</a>
+      <a class="btn btn-ghost-dark" href="tel:+27627152900">Call +27 62 715 2900</a>
     </div>
-  </section>
+  </div>
+</section>
+</main>
 
-  <!-- ========== WHAT I DO ========== -->
-  <section class="services" id="services">
-    <div class="container">
-      <p class="section-label reveal-up">What I Do</p>
-      <h2 class="section-title reveal-up">Turning ideas into<br /><span class="accent">digital reality</span></h2>
+<footer class="site-footer">
+  <div class="wrap">
+    <img src="assets/logo.svg" alt="Softwared" width="120" height="36">
+    <p class="risk">Risk warning: trading leveraged products carries a high risk of loss. Indicators and EAs are tools, not guarantees; past performance does not indicate future results. Nothing here is financial advice.</p>
+    <p class="copy">© <span id="year"></span> Softwared. All rights reserved.</p>
+  </div>
+</footer>
 
-      <div class="services-grid">
-        <article class="service-card glass reveal-up" data-delay="0">
-          <div class="service-icon"><i class="fa-solid fa-code"></i></div>
-          <h3>Website Development</h3>
-          <p>Design and develop modern websites from scratch and transform outdated websites into responsive, high-performance, and competitive web experiences.</p>
-          <span class="service-tag">Websites</span>
-        </article>
-
-        <article class="service-card glass reveal-up" data-delay="100">
-          <div class="service-icon"><i class="fa-brands fa-flutter"></i></div>
-          <h3>Mobile and Web Applications</h3>
-          <p>Develop powerful mobile and web applications, including e-commerce platforms and complex, feature-rich systems tailored to real world business needs.</p>
-          <span class="service-tag"> Applications</span>
-        </article>
-
-        <article class="service-card glass reveal-up" data-delay="200">
-          <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
-          <h3>Trading Algorithm Systems</h3>
-          <p>Develop custom MetaTrader 4 and 5 indicators and Expert Advisors (EAs) for algorithmic trading, designed to automate trading strategies, improve decision-making, and enhance execution efficiency.</p>
-          <span class="service-tag">Trading Automation</span>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== ABOUT ========== -->
-  <section class="about" id="about">
-    <div class="container about-grid">
-      <div class="about-image-col reveal-left">
-        <div class="about-img-frame glass">
-          <img src="images/About.png" alt="About Lehlohonolo" class="about-img" />
-        </div>
-        <!-- Stat chips -->
-        <div class="stat-chips">
-          <div class="stat-chip glass">
-            <span class="stat-num">3+</span>
-            <span class="stat-label">Years Coding</span>
-          </div>
-          <div class="stat-chip glass">
-            <span class="stat-num">10+</span>
-            <span class="stat-label">Projects Built</span>
-          </div>
-          <div class="stat-chip glass">
-            <span class="stat-num">3+</span>
-            <span class="stat-label">Frameworks used</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="about-text-col reveal-right">
-        <p class="section-label">About Me</p>
-        <h2 class="section-title">Passionate about using<br /><span class="accent">technology</span> to solve problems</h2>
-
-        <p class="about-bio">I'm a Computer Science &amp; Information Systems senior student with a deep passion for building software that makes a genuine difference. </p>
-        <p class="about-bio">I enjoy helping businesses turn ideas into software people actually use. My long-term mission is to build platforms that connect people to meaningful opportunities.</p>
-
-        <div class="about-tabs">
-          <button class="tab-btn active" data-tab="education">Education</button>
-          <button class="tab-btn" data-tab="experience">Experience</button>
-          <button class="tab-btn" data-tab="goals">Goals</button>
-        </div>
-
-        <div class="tab-content active" id="tab-education">
-          <ul class="timeline">
-            <li>
-              <span class="tl-year">2024 — Present</span>
-              <strong>Bachelor of Commerce in Computer Science &amp; Information Systems</strong>
-              <span>Undergraduate Degree</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="tab-content" id="tab-experience">
-          <ul class="timeline">
-            <li>
-              <span class="tl-year">2023 - Present</span>
-              <strong>Freelance software Developer</strong>
-              <span>Websites, Landing Pages &amp; Trading Algorithm systems </span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="tab-content" id="tab-goals">
-          <p class="goal-text">My mission is to use software to solve real world problems and improve lives. In the Long run, I want to build scalable platforms that connect people to opportunities whether that's employment, services, or financial growth.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== SKILLS ========== -->
-  <section class="skills" id="skills">
-    <div class="container">
-      <p class="section-label reveal-up">Technology Stack</p>
-      <h2 class="section-title reveal-up">Tools &amp; <span class="accent">Technologies</span></h2>
-
-      <div class="skills-grid reveal-up">
-        <!-- Skill cards with animated progress bars -->
-        <div class="skill-item glass">
-          <div class="skill-header">
-            <span class="skill-name"><i class="fa-brands fa-html5"></i> HTML5</span>
-            <span class="skill-pct">85%</span>
-          </div>
-          <div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div>
-        </div>
-
-        <div class="skill-item glass">
-          <div class="skill-header">
-            <span class="skill-name"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
-            <span class="skill-pct">85%</span>
-          </div>
-          <div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div>
-        </div>
-
-        <div class="skill-item glass">
-          <div class="skill-header">
-            <span class="skill-name"><i class="fa-brands fa-js"></i> JavaScript</span>
-            <span class="skill-pct">80%</span>
-          </div>
-          <div class="skill-bar"><div class="skill-fill" data-pct="80"></div></div>
-        </div>
-
-        <div class="skill-item glass">
-          <div class="skill-header">
-            <span class="skill-name"><i class="fa-brands fa-flutter"></i> Dart (Flutter framework)</span>
-            <span class="skill-pct">70%</span>
-          </div>
-          <div class="skill-bar"><div class="skill-fill" data-pct="70"></div></div>
-        </div>
-
-        <div class="skill-item glass">
-          <div class="skill-header">
-            <span class="skill-name"><i class="fa-brands fa-python"></i> Java</span>
-            <span class="skill-pct">75%</span>
-          </div>
-          <div class="skill-bar"><div class="skill-fill" data-pct="75"></div></div>
-        </div>
-
-        <div class="skill-item glass">
-          <div class="skill-header">
-            <span class="skill-name"><i class="fa-solid fa-chart-candlestick"></i> MQL4 / MQL5</span>
-            <span class="skill-pct">70%</span>
-          </div>
-          <div class="skill-bar"><div class="skill-fill" data-pct="70"></div></div>
-        </div>
-
-        <div class="skill-item glass">
-          <div class="skill-header">
-            <span class="skill-name"><i class="fa-brands fa-git-alt"></i> Git / GitHub</span>
-            <span class="skill-pct">65%</span>
-          </div>
-          <div class="skill-bar"><div class="skill-fill" data-pct="65"></div></div>
-        </div>
-
-        <div class="skill-item glass">
-          <div class="skill-header">
-            <span class="skill-name"><i class="fa-solid fa-hashtag"></i> C# (.NET framework)</span>
-            <span class="skill-pct">70%</span>
-          </div>
-          <div class="skill-bar"><div class="skill-fill" data-pct="70"></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== PROJECTS ========== -->
-  <section class="projects" id="projects">
-    <div class="container">
-      <p class="section-label reveal-up">Featured Projects</p>
-      <h2 class="section-title reveal-up">Things I've <span class="accent">built</span></h2>
-      <p class="section-sub reveal-up">My mission: use software to solve real-world problems and improve lives.</p>
-
-      <!-- Filter buttons -->
-      <div class="project-filters reveal-up">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="web">Web</button>
-        <button class="filter-btn" data-filter="mobile">Mobile</button>
-        <button class="filter-btn" data-filter="expert-advisor">Trading</button>
-      </div>
-
-      <div class="projects-grid">
-        <article class="project-card glass reveal-up" data-cat="web" data-delay="0">
-          <div class="project-img-wrap">
-            <img src="images/exam-prep.png" alt="ExamPrep platform" class="project-img" />
-            <div class="project-overlay">
-              <a href="https://study2pass.netlify.app" class="proj-link" aria-label="View project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-              <a href="https://github.com/lehlohonolohappymasipa/ExamPrep" class="proj-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="project-tag">Web Application</span>
-            <h3>ExamPrep</h3>
-            <p>A beta version of a web application with exam structured content to help high school learners prepare for their exams.</p>
-          </div>
-        </article>
-
-        <article class="project-card glass reveal-up" data-cat="web" data-delay="100">
-          <div class="project-img-wrap">
-            <img src="images/memorial.png" alt="Memorial website" class="project-img" />
-            <div class="project-overlay">
-              <a href="https://mafhungoalex.co.za" class="proj-link" aria-label="View project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-              <a href="https://github.com/lehlohonolohappymasipa/community-speech-and-hearing-web/blob/main/index.html" class="proj-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="project-tag">Website</span>
-            <h3>A memorial website</h3>
-            <p>A website in loving memory of my grandfather.</p>
-          </div>
-        </article>
-
-        <article class="project-card glass reveal-up" data-cat="mobile" data-delay="200">
-          <div class="project-img-wrap">
-            <img src="images/sneakaSA.png" alt="Trading App" class="project-img" />
-            <div class="project-overlay">
-              <a href="https://github.com/lehlohonolohappymasipa/sneaker-sa" class="proj-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="project-tag">Mobile App</span>
-            <h3>SneakaSA</h3>
-            <p>A cross-platform mobile e-commerce app for selling South African shoe brands.</p>
-          </div>
-        </article>
-
-        <article class="project-card glass reveal-up" data-cat="trading" data-delay="200">
-          <div class="project-img-wrap">
-            <img src="images/trade.png" alt="MT4 Expert Advisor" class="project-img" />
-            <div class="project-overlay">
-              <a href="https://github.com/lehlohonolohappymasipa/The-Forever-Model-EA/blob/main/The%20Forever%20Model%20Trader%20EA.mq5" class="proj-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="project-tag">Trading Automation</span>
-            <h3>MT5 Expert Advisor</h3>
-            <p>An MQL5-powered algorithmic trading bot with custom risk management and entry/exit strategies.</p>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== CONTACT ========== -->
-  <section class="contact" id="contact">
-    <!-- Orb background -->
-    <div class="orb orb-4"></div>
-
-    <div class="container contact-grid">
-      <div class="contact-info reveal-left">
-        <p class="section-label">Get In Touch</p>
-        <h2 class="section-title">Let's build something<br /><span class="accent">together</span></h2>
-        <p class="contact-desc">Whether you need a website, mobile app, or trading system. I'd love to hear about your project.</p>
-
-        <ul class="contact-details">
-          <li>
-            <span class="cd-icon"><i class="fa-solid fa-envelope"></i></span>
-            <span>masipalh@icloud.com</span>
-          </li>
-          <li>
-            <span class="cd-icon"><i class="fa-solid fa-phone"></i></span>
-            <span>+27 62 715 2900</span>
-          </li>
-          <li>
-            <span class="cd-icon"><i class="fa-solid fa-location-dot"></i></span>
-            <span>Gqeberha Eastern Cape<br/> South Africa</span>
-          </li>
-        </ul>
-
-        <div class="social-links">
-          <a href="https://github.com/lehlohonolohappymasipa" class="social-btn glass" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/lehlohonolo-happy-masipa-5552841b4" class="social-btn glass" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://www.facebook.com/profile.php?id=61587234401630" class="social-btn glass" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        </div>
-      </div>
-
-      <div class="contact-form-wrap reveal-right">
-        <form name="contact"
-            method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            id="contactForm"
-            class="contact-form glass">
-          <input type="hidden" name="form-name" value="contact" />
-          <p hidden>
-            <input name="bot-field" />
-          </p>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Full Name <span class="req">*</span></label>
-              <input type="text" id="name" name="name" placeholder="Your name" required />
-              <span class="form-error" id="nameError"></span>
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address <span class="req">*</span></label>
-              <input type="email" id="email" name="email" placeholder="your@email.com" required />
-              <span class="form-error" id="emailError"></span>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="service">Service Needed <span class="req">*</span></label>
-            <select id="service" name="service" required>
-              <option value="" disabled selected>Select a service…</option>
-              <option value="website">Website</option>
-              <option value="mobile">Mobile &amp;/ Web Application</option>
-              <option value="trading">Trading Automation</option>
-              <option value="other">Other</option>
-            </select>
-            <span class="form-error" id="serviceError"></span>
-          </div>
-
-          <div class="form-group">
-            <label for="budget">Budget Range</label>
-            <select id="budget" name="budget">
-              <option value="" disabled selected>Select budget…</option>
-              <option value="<5k">Under R2 500</option>
-              <option value="5-15k">R2 500 – R8 000</option>
-              <option value="15-30k">R8 000 – R15 000</option>
-              <option value="30k+">R15 000+</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message <span class="req">*</span></label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
-            <span class="form-error" id="messageError"></span>
-          </div>
-
-          <!-- Checkbox row -->
-          <div class="form-check">
-            <input type="checkbox" id="newsletter" name="newsletter" />
-            <label for="newsletter">I'd like to receive occasional project updates and newsletters.</label>
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
-            <span class="btn-label">Send Message</span>
-            <span class="btn-spinner" aria-hidden="true"></span>
-            <i class="fa-solid fa-paper-plane btn-icon"></i>
-          </button>
-
-          <!-- Success / error feedback -->
-          <div class="form-feedback" id="formFeedback" role="status" aria-live="polite"></div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <img id="footerLogo" class="footer-logo" alt="LM Logo" />
-      <p class="footer-copy">&copy; 2026. All rights reserved.</p>
-      <a href="#home" class="back-top" aria-label="Back to top">
-        <i class="fa-solid fa-chevron-up"></i>
-      </a>
-    </div>
-  </footer>
-
-  <!-- External JS last -->
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="script/script.js"></script>
+<a class="wa-fab" href="https://wa.me/27627152900" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-2c1.8 1 3.8 1.5 5.6 1.5 7 0 12.600-5.600 12.600-12.500S23 3 16 3zm0 22.800c-1.800 0-3.500-.5-5-1.400l-.4-.2-4.400 1.200 1.200-4.300-.3-.4a10 10 0 0 1-1.500-5.300C5.600 9.900 10.200 5.400 16 5.400s10.400 4.500 10.400 10.100S21.700 25.800 16 25.800zm5.700-7.500c-.3-.2-1.900-.9-2.200-1-.3-.1-.5-.2-.7.200l-1 1.200c-.2.200-.4.200-.7.100a8.500 8.500 0 0 1-4.200-3.700c-.3-.6.300-.5.900-1.700.1-.2 0-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.100-.9.400-.3.300-1.200 1.200-1.200 2.800s1.200 3.200 1.400 3.400c.2.200 2.400 3.700 5.900 5.100 2.200.9 3 .9 4 .8.600-.1 1.900-.8 2.200-1.500.3-.8.300-1.400.2-1.500-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+<script src="Scripts/script.js"></script>
 </body>
 </html>
